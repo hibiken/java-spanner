@@ -203,7 +203,6 @@ public class PgSpannerSample {
       // Initiate the request which returns an OperationFuture.
       Database db = op.get();
       System.out.println("Created database [" + db.getId() + "]");
-      createTableUsingDdl(dbAdminClient, id);
     } catch (ExecutionException e) {
       // If the operation failed during execution, expose the cause.
       throw (SpannerException) e.getCause();
